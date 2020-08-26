@@ -12,6 +12,16 @@ Pessoa::Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
     idade                 = -1;
 }
 
+void Pessoa::inicializa(const char* nome, int diaDeNascimento,
+                        int mesDeNascimento, int anoDeNascimento)
+{
+    strcpy(this->nome, nome);
+    this->diaDeNascimento = diaDeNascimento;
+    this->mesDeNascimento = mesDeNascimento;
+    this->anoDeNascimento = anoDeNascimento;
+    idade                 = -1;
+}
+
 void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
 {
     idade = anoAtual - anoDeNascimento;
@@ -31,7 +41,6 @@ void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
 
 void Pessoa::imprimirIdade()
 {
-    // printf("A idade de %s eh/seria: %d\n", nome, idade);
     std::cout << "A idade de " << nome << " eh/seria: " << idade << '\n';
 }
 

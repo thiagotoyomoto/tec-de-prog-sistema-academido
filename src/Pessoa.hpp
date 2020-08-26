@@ -15,9 +15,15 @@ class Pessoa
     int  idade;
 
   public:
-    // O valor padrão só deve aparecer no protótipo da função/método/construtor
+    // O valor padrão só deve aparecer no protótipo da função/método/construtor.
+    // -----
+    // Como todos os parâmetros estão com valor padrão, ele já é considerado um
+    // construtor vazio.
     Pessoa(const char* nome = "", int diaDeNascimento = 0,
            int mesDeNascimento = 0, int anoDeNascimento = 0);
+
+    void inicializa(const char* nome, int diaDeNascimento, int mesDeNascimento,
+                    int anoDeNascimento);
 
     void calcularIdade(int diaAtual, int mesAtual, int anoAtual);
     void imprimirIdade();
