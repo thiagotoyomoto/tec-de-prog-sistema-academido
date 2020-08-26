@@ -2,11 +2,13 @@
 
 struct Pessoa
 {
+  private:
     int dia;
     int mes;
     int ano;
     int idade;
 
+  public:
     Pessoa(int diaAtual, int mesAtual, int anoAtual)
     {
         dia   = diaAtual;
@@ -30,5 +32,10 @@ struct Pessoa
                 idade -= 1;
             }
         }
+    }
+
+    int informarIdade()
+    {
+        return idade;
     }
 };

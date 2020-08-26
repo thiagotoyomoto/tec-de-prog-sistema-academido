@@ -8,8 +8,8 @@ int main()
     einstein.calcularIdade(26, 8, 2020);
     newton.calcularIdade(26, 8, 2020);
 
-    printf("A idade de Einstein seria: %d\n", einstein.idade);
-    printf("A idade de Newton seria: %d\n", newton.idade);
+    printf("A idade de Einstein seria: %d\n", einstein.informarIdade());
+    printf("A idade de Newton seria: %d\n", newton.informarIdade());
 
     return 0;
 }
