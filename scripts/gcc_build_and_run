@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-gcc_build
-gcc_run

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+PWD=$(pwd)
+"${PWD}/scripts/gcc_compile" && echo; "${PWD}/scripts/gcc_run"

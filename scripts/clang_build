@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-CC=gcc CCX=g++ meson builds/clang
+rm -rf builds/clang
+CC=clang CCX=clang++ meson builds/clang
