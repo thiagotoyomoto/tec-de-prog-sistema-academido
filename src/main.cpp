@@ -1,5 +1,5 @@
 #include "Pessoa.hpp"
-#include <stdio.h>
+#include <iostream>
 
 int main()
 {
@@ -12,6 +12,10 @@ int main()
     eu.calcularEImprimirIdade(26, 8, 2020);
     einstein.calcularEImprimirIdade(26, 8, 2020);
     newton.calcularEImprimirIdade(26, 8, 2020);
+
+    // Utilizar sempre o std::endl é custoso, então utilizar o '\n' para que
+    // seja liberado o buffer todo de uma vez.
+    std::cout << std::flush;
 
     return 0;
 }

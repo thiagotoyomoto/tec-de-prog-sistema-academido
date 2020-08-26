@@ -9,9 +9,9 @@ class Pessoa
 {
   private:
     char nome[40];
-    int  dia;
-    int  mes;
-    int  ano;
+    int  diaDeNascimento;
+    int  mesDeNascimento;
+    int  anoDeNascimento;
     int  idade;
 
   public:
