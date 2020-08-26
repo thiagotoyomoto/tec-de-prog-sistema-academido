@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+time "$(pwd)/builds/clang/main"; echo "Return code: ${?}"

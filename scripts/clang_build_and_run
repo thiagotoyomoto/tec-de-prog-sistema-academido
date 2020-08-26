@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PWD=$(pwd)
+
+"${PWD}/scripts/clang_compile"
+echo
+"${PWD}/scripts/clang_run"

@@ -1,0 +1,5 @@
+project('sistema-academico', 'c', version: '1.0', default_options: ['warning_level=3'])
+
+src = ['src/main.c']
+
+executable('main', sources : src)

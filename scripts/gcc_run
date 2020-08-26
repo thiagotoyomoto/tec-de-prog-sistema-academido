@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+time "$(pwd)/builds/gcc/main"; echo "Return code: ${?}"

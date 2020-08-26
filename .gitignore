@@ -1,0 +1,6 @@
+.vscode
+.clangd
+compile_commands.json
+gcc-build
+clang-build
+builds
