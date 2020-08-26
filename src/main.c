@@ -11,21 +11,21 @@ struct Pessoa
 int calcularIdade(struct Pessoa* pessoa, int diaAtual, int mesAtual,
                   int anoAtual)
 {
-    pessoa->idade = anoAtual - pessoa->ano;
+    (*pessoa).idade = anoAtual - (*pessoa).ano;
 
-    if(pessoa->mes < mesAtual)
+    if((*pessoa).mes < mesAtual)
     {
-        pessoa->idade -= 1;
+        (*pessoa).idade -= 1;
     }
-    else if(pessoa->mes == mesAtual)
+    else if((*pessoa).mes == mesAtual)
     {
-        if(pessoa->dia < diaAtual)
+        if((*pessoa).dia < diaAtual)
         {
-            pessoa->idade -= 1;
+            (*pessoa).idade -= 1;
         }
     }
 
-    return pessoa->idade;
+    return (*pessoa).idade;
 }
 
 int main()
