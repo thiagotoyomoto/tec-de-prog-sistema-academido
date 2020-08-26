@@ -1,1 +1,1 @@
-meson_builds/c.meson.build
+meson_builds/cpp.meson.build
