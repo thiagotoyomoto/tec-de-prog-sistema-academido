@@ -1,6 +1,7 @@
 // Por padrão, os atributos e métodos de uma "struct" já são públicos.
+// Já em uma "classe", os atributo e métodos, por padrão, são privados.
 
-struct Pessoa
+class Pessoa
 {
   private:
     int dia;
