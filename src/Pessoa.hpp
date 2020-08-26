@@ -8,15 +8,20 @@
 class Pessoa
 {
   private:
-    int dia;
-    int mes;
-    int ano;
-    int idade;
+    char nome[40];
+    int  dia;
+    int  mes;
+    int  ano;
+    int  idade;
 
   public:
-    Pessoa(int diaDeNascimento, int mesDeNascimento, int anoDeNascimento);
+    Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
+           int anoDeNascimento);
     void calcularIdade(int diaAtual, int mesAtual, int anoAtual);
-    int  informarIdade();
+    void imprimirIdade();
+    void calcularEImprimirIdade(int diaAtual, int mesAtual, int anoAtual);
+
+    int informarIdade();
 };
 
 #endif /* F6E4EA23_837F_4FBF_B37E_09E94001650E */
