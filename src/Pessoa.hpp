@@ -15,8 +15,10 @@ class Pessoa
     int  idade;
 
   public:
-    Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
-           int anoDeNascimento);
+    // O valor padrão só deve aparecer no protótipo da função/método/construtor
+    Pessoa(const char* nome = "", int diaDeNascimento = 0,
+           int mesDeNascimento = 0, int anoDeNascimento = 0);
+
     void calcularIdade(int diaAtual, int mesAtual, int anoAtual);
     void imprimirIdade();
     void calcularEImprimirIdade(int diaAtual, int mesAtual, int anoAtual);
