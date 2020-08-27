@@ -10,6 +10,10 @@ class Principal
     Pessoa einstein;
     Pessoa newton;
 
+    int diaAtual;
+    int mesAtual;
+    int anoAtual;
+
   public:
     Principal();
     void executar();

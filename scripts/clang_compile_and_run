@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
 PWD=$(pwd)
-"${PWD}/scripts/clang_compile"
-[ ${?} = 0 ] && echo; "${PWD}/scripts/clang_run"
+"${PWD}/scripts/clang_compile" && "${PWD}/scripts/clang_run"

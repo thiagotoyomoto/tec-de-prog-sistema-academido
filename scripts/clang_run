@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-time "$(pwd)/builds/clang/main"; echo "Return code: ${?}"
+RETURN_CODE=${?}
+COLOR=32
+[ ! ${RETURN_CODE} = 0 ] && COLOR=31
+
+time "$(pwd)/builds/clang/main"
+echo -e "Código de retorno: \033[${COLOR}m${RETURN_CODE}\033[0m\n"
+read -p $'\e[1mPressione [Enter] para continuar...\e[0m'

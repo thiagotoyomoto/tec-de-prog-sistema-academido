@@ -26,13 +26,13 @@ void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
 {
     idade = anoAtual - anoDeNascimento;
 
-    if(mesDeNascimento < mesAtual)
+    if(mesDeNascimento > mesAtual)
     {
         idade -= 1;
     }
     else if(mesDeNascimento == mesAtual)
     {
-        if(diaDeNascimento < diaAtual)
+        if(diaDeNascimento > diaAtual)
         {
             idade -= 1;
         }

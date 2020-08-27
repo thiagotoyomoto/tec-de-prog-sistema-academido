@@ -1,4 +1,5 @@
 #include "Principal.hpp"
+#include <string>
 
 int main()
 {
