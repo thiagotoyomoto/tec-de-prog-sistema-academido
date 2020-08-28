@@ -68,11 +68,11 @@ void Pessoa::imprimirUniversidadeFiliado()
 {
     if(universidadeFiliado != nullptr)
     {
-        std::cout << nome << " eh filiado a "
-                  << universidadeFiliado->obterNome() << '\n';
+        std::cout << nome << " eh/foi filiado a "
+                  << universidadeFiliado->obterNome() << ".\n";
     }
     else
     {
-        std::cout << nome << " nao eh filiado a nenhuma universidade.\n";
+        std::cout << nome << " nao eh/era filiado a nenhuma universidade.\n";
     }
 }

@@ -5,7 +5,9 @@
 Principal::Principal() :
     joao("Joao", 1, 1, 1996), thiago("Thiago", 18, 4, 2001),
     einstein("Einstein", 14, 3, 1879), newton("Newton", 4, 1, 1643),
-    UTFPR("Universidade Tecnologica Federal do Parana")
+    UTFPR("Universidade Tecnologica Federal do Parana"),
+    princeton("Universidade de Princeton"),
+    cambridge("Universidade de Cambridge")
 {
     /*
     Obs.: Para ignorar algum valor de uma tupla, é só utilizar o objeto
@@ -18,6 +20,8 @@ Principal::Principal() :
     Data::imprimirFormatada(diaAtual, mesAtual, anoAtual);
 
     thiago.atribuirUniversidadeFiliado(&UTFPR);
+    einstein.atribuirUniversidadeFiliado(&princeton);
+    newton.atribuirUniversidadeFiliado(&cambridge);
 
     executar();
 }

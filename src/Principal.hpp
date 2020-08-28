@@ -13,6 +13,8 @@ class Principal
     Pessoa newton;
 
     Universidade UTFPR;
+    Universidade princeton;
+    Universidade cambridge;
 
     int diaAtual;
     int mesAtual;
