@@ -3,6 +3,7 @@
 #ifndef F6E4EA23_837F_4FBF_B37E_09E94001650E
 #define F6E4EA23_837F_4FBF_B37E_09E94001650E
 
+#include "Departamento.hpp"
 #include "Universidade.hpp"
 
 // Por padrão, os atributos e métodos de uma "struct" já são públicos.
@@ -17,6 +18,7 @@ class Pessoa
     int  idade;
 
     Universidade* universidadeFiliado;
+    Departamento* departamentoFiliado;
 
   public:
     // O valor padrão só deve aparecer no protótipo da função/método/construtor.
@@ -26,9 +28,6 @@ class Pessoa
     Pessoa(const char* nome = "", int diaDeNascimento = 0,
            int mesDeNascimento = 0, int anoDeNascimento = 0);
 
-    void inicializa(const char* nome, int diaDeNascimento, int mesDeNascimento,
-                    int anoDeNascimento);
-
     void calcularIdade(int diaAtual, int mesAtual, int anoAtual);
     void imprimirIdade();
     void calcularEImprimirIdade(int diaAtual, int mesAtual, int anoAtual);
@@ -37,6 +36,9 @@ class Pessoa
 
     void atribuirUniversidadeFiliado(Universidade* universidade);
     void imprimirUniversidadeFiliado();
+
+    void atribuirDepartamentoFiliado(Departamento* departamento);
+    void imprimirDepartamentoFiliado();
 };
 
 #endif /* F6E4EA23_837F_4FBF_B37E_09E94001650E */

@@ -16,6 +16,10 @@ class Principal
     Universidade princeton;
     Universidade cambridge;
 
+    Departamento departamentoDeMatematica;
+    Departamento departamentoDeFisica;
+    Departamento departamentoDeComputacao;
+
     int diaAtual;
     int mesAtual;
     int anoAtual;

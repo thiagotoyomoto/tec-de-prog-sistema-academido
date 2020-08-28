@@ -3,27 +3,12 @@
 #include <string.h>
 
 Pessoa::Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
-               int anoDeNascimento)
+               int anoDeNascimento) :
+    diaDeNascimento(diaDeNascimento),
+    mesDeNascimento(mesDeNascimento), anoDeNascimento(anoDeNascimento),
+    idade(-1), universidadeFiliado(nullptr), departamentoFiliado(nullptr)
 {
     strcpy(this->nome, nome);
-    this->diaDeNascimento = diaDeNascimento;
-    this->mesDeNascimento = mesDeNascimento;
-    this->anoDeNascimento = anoDeNascimento;
-    idade                 = -1;
-
-    universidadeFiliado = nullptr;
-}
-
-void Pessoa::inicializa(const char* nome, int diaDeNascimento,
-                        int mesDeNascimento, int anoDeNascimento)
-{
-    strcpy(this->nome, nome);
-    this->diaDeNascimento = diaDeNascimento;
-    this->mesDeNascimento = mesDeNascimento;
-    this->anoDeNascimento = anoDeNascimento;
-    idade                 = -1;
-
-    universidadeFiliado = nullptr;
 }
 
 void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
@@ -74,5 +59,23 @@ void Pessoa::imprimirUniversidadeFiliado()
     else
     {
         std::cout << nome << " nao eh/era filiado a nenhuma universidade.\n";
+    }
+}
+
+void Pessoa::atribuirDepartamentoFiliado(Departamento* departamento)
+{
+    departamentoFiliado = departamento;
+}
+
+void Pessoa::imprimirDepartamentoFiliado()
+{
+    if(departamentoFiliado != nullptr)
+    {
+        std::cout << nome << " eh/foi filiado ao "
+                  << departamentoFiliado->obterNome() << ".\n";
+    }
+    else
+    {
+        std::cout << nome << " nao eh/era filiado a nenhum departamento.\n";
     }
 }
