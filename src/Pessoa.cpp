@@ -10,6 +10,8 @@ Pessoa::Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
     this->mesDeNascimento = mesDeNascimento;
     this->anoDeNascimento = anoDeNascimento;
     idade                 = -1;
+
+    universidadeFiliado = nullptr;
 }
 
 void Pessoa::inicializa(const char* nome, int diaDeNascimento,
@@ -20,6 +22,8 @@ void Pessoa::inicializa(const char* nome, int diaDeNascimento,
     this->mesDeNascimento = mesDeNascimento;
     this->anoDeNascimento = anoDeNascimento;
     idade                 = -1;
+
+    universidadeFiliado = nullptr;
 }
 
 void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
@@ -53,4 +57,22 @@ void Pessoa::calcularEImprimirIdade(int diaAtual, int mesAtual, int anoAtual)
 int Pessoa::informarIdade()
 {
     return idade;
+}
+
+void Pessoa::atribuirUniversidadeFiliado(Universidade* universidade)
+{
+    universidadeFiliado = universidade;
+}
+
+void Pessoa::imprimirUniversidadeFiliado()
+{
+    if(universidadeFiliado != nullptr)
+    {
+        std::cout << nome << " eh filiado a "
+                  << universidadeFiliado->obterNome() << '\n';
+    }
+    else
+    {
+        std::cout << nome << " nao eh filiado a nenhuma universidade.\n";
+    }
 }

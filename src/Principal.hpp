@@ -2,13 +2,17 @@
 #define DC63510F_9A97_489B_B0D1_53034A915F5E
 
 #include "Pessoa.hpp"
+#include "src/Universidade.hpp"
 
 class Principal
 {
   private:
+    Pessoa joao;
     Pessoa thiago;
     Pessoa einstein;
     Pessoa newton;
+
+    Universidade UTFPR;
 
     int diaAtual;
     int mesAtual;
