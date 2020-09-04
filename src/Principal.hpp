@@ -1,16 +1,17 @@
 #ifndef DC63510F_9A97_489B_B0D1_53034A915F5E
 #define DC63510F_9A97_489B_B0D1_53034A915F5E
 
-#include "Pessoa.hpp"
+#include "Departamento.hpp"
+#include "Professor.hpp"
 #include "Universidade.hpp"
 
 class Principal
 {
   private:
-    Pessoa einstein;
-    Pessoa joao;
-    Pessoa newton;
-    Pessoa thiago;
+    Professor einstein;
+    Professor joao;
+    Professor newton;
+    Professor thiago;
 
     Universidade cambridge;
     Universidade harvard;

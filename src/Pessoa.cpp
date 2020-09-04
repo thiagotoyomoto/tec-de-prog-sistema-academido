@@ -10,6 +10,8 @@ Pessoa::Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
     strcpy(this->nome, nome);
 }
 
+Pessoa::~Pessoa() { }
+
 void Pessoa::calcularIdade(int diaAtual, int mesAtual, int anoAtual)
 {
     idade = anoAtual - anoDeNascimento;
@@ -41,41 +43,4 @@ void Pessoa::calcularEImprimirIdade(int diaAtual, int mesAtual, int anoAtual)
 int Pessoa::informarIdade()
 {
     return idade;
-}
-
-void Pessoa::atribuirUniversidadeFiliado(Universidade* universidade)
-{
-    universidadeFiliado = universidade;
-}
-
-void Pessoa::imprimirUniversidadeFiliado()
-{
-    if(universidadeFiliado != nullptr)
-    {
-        std::cout << nome << " eh/foi filiado a "
-                  << universidadeFiliado->obterNome() << ".\n";
-    }
-    else
-    {
-        std::cout << nome << " nao eh/era filiado a nenhuma universidade.\n";
-    }
-}
-
-void Pessoa::atribuirDepartamentoFiliado(Departamento* departamento)
-{
-    departamentoFiliado = departamento;
-}
-
-void Pessoa::imprimirDepartamentoFiliado()
-{
-    if(departamentoFiliado != nullptr)
-    {
-        std::cout << nome << " eh/foi filiado ao "
-                  << departamentoFiliado->obterNome() << " da "
-                  << universidadeFiliado->obterNome() << ".\n";
-    }
-    else
-    {
-        std::cout << nome << " nao eh/era filiado a nenhum departamento.\n";
-    }
 }
