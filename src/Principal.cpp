@@ -26,11 +26,11 @@ Principal::Principal() :
     std::tie(diaAtual, mesAtual, anoAtual) = Data::obterAtual();
     Data::imprimirFormatada(diaAtual, mesAtual, anoAtual);
 
-    cambridge.adicionarDepartamento(0, &departamentoDeFisica);
-    princeton.adicionarDepartamento(0, &departamentoDeMatematica);
-    utfpr.adicionarDepartamento(0, &departamentoDeComputacao);
-    yale.adicionarDepartamento(0, &departamentoDeAstrologia);
-    yale.adicionarDepartamento(1, &departamentoDeQuimica);
+    cambridge.adicionarDepartamento(&departamentoDeFisica);
+    princeton.adicionarDepartamento(&departamentoDeMatematica);
+    utfpr.adicionarDepartamento(&departamentoDeComputacao);
+    yale.adicionarDepartamento(&departamentoDeAstrologia);
+    yale.adicionarDepartamento(&departamentoDeQuimica);
 
     einstein.atribuirUniversidadeFiliado(&princeton);
     newton.atribuirUniversidadeFiliado(&cambridge);

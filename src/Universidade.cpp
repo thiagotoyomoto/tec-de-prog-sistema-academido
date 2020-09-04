@@ -24,23 +24,14 @@ char* Universidade::obterNome()
     return nome;
 }
 
-void Universidade::adicionarDepartamento(int indice, Departamento* departamento)
+void Universidade::adicionarDepartamento(Departamento* departamento)
 {
-    if(indice < 0 || indice >= 50)
-    {
-        return;
-    }
-
-    if(!departamentos[indice])
-    {
-        ++quantidadeDeDepartamentos;
-    }
-    departamentos[indice] = departamento;
+    departamentos.push_back(departamento);
 }
 
 void Universidade::imprimirTodosOsDepartamentos()
 {
-    if(quantidadeDeDepartamentos == 0)
+    if(departamentos.size() == 0)
     {
         std::cout << "A " << nome
                   << " nao tem nenhum departamento registrado.\n";
@@ -50,9 +41,6 @@ void Universidade::imprimirTodosOsDepartamentos()
     std::cout << "Departamentos da " << nome << ":\n";
     for(auto& departamento: departamentos)
     {
-        if(departamento)
-        {
-            std::cout << "  " << departamento->obterNome() << '\n';
-        }
+        std::cout << "  " << departamento->obterNome() << '\n';
     }
 }

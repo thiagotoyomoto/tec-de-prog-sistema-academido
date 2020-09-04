@@ -1,14 +1,15 @@
 #ifndef C7C9DF9F_7322_46C4_AA16_4236189C7FE6
 #define C7C9DF9F_7322_46C4_AA16_4236189C7FE6
 
+#include <vector>
+
 class Departamento;
 
 class Universidade
 {
   private:
     char          nome[80]                  = "";
-    int           quantidadeDeDepartamentos = 0;
-    Departamento* departamentos[50];
+    std::vector<Departamento*> departamentos;
 
   public:
     Universidade(const char* nome = "");
@@ -17,7 +18,7 @@ class Universidade
     void  atribuirNome(const char* nome);
     char* obterNome();
 
-    void adicionarDepartamento(int indice, Departamento* departamento);
+    void adicionarDepartamento(Departamento* departamento);
     void imprimirTodosOsDepartamentos();
 };
 
