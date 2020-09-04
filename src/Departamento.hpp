@@ -14,10 +14,10 @@ class Departamento
     Departamento(const char* nome);
     ~Departamento();
 
-    void  atribuirNome(const char* nome);
+    void  atribuirNome(const char* valor);
     char* obterNome();
 
-    void registrarNaUniversidade(Universidade* universidade);
+    void registrarNaUniversidade(Universidade* valor);
     void imprimirUniversidadeRegistrada();
 };
 

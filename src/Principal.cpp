@@ -12,6 +12,7 @@ Principal::Principal() :
     yale("Universidade Yale"),
     departamentoDeAstrologia("Departamento de Astrologia"),
     departamentoDeComputacao("Departamento de Computacao"),
+    departamentoDeFilosifia("Departamento de Filosofia"),
     departamentoDeFisica("Departamento de Fisica"),
     departamentoDeMatematica("Departamento de Matematica"),
     departamentoDeQuimica("Departamento de Quimica")
@@ -77,6 +78,15 @@ void Principal::executar()
     princeton.imprimirTodosOsDepartamentos();
     utfpr.imprimirTodosOsDepartamentos();
     yale.imprimirTodosOsDepartamentos();
+
+    std::cout << '\n';
+
+    departamentoDeAstrologia.imprimirUniversidadeRegistrada();
+    departamentoDeComputacao.imprimirUniversidadeRegistrada();
+    departamentoDeFilosifia.imprimirUniversidadeRegistrada();
+    departamentoDeFisica.imprimirUniversidadeRegistrada();
+    departamentoDeMatematica.imprimirUniversidadeRegistrada();
+    departamentoDeQuimica.imprimirUniversidadeRegistrada();
 
     std::cout << std::flush;
 }

@@ -21,6 +21,7 @@ class Principal
 
     Departamento departamentoDeAstrologia;
     Departamento departamentoDeComputacao;
+    Departamento departamentoDeFilosofia;
     Departamento departamentoDeFisica;
     Departamento departamentoDeMatematica;
     Departamento departamentoDeQuimica;

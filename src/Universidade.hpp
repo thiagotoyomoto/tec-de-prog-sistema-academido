@@ -1,7 +1,7 @@
 #ifndef C7C9DF9F_7322_46C4_AA16_4236189C7FE6
 #define C7C9DF9F_7322_46C4_AA16_4236189C7FE6
 
-#include <vector>
+#include <list>
 
 class Departamento;
 
@@ -9,7 +9,7 @@ class Universidade
 {
   private:
     char          nome[80]                  = "";
-    std::vector<Departamento*> departamentos;
+    std::list<Departamento*> departamentos;
 
   public:
     Universidade(const char* nome = "");
