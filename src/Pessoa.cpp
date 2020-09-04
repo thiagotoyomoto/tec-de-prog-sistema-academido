@@ -5,8 +5,7 @@
 Pessoa::Pessoa(const char* nome, int diaDeNascimento, int mesDeNascimento,
                int anoDeNascimento) :
     diaDeNascimento(diaDeNascimento),
-    mesDeNascimento(mesDeNascimento), anoDeNascimento(anoDeNascimento),
-    idade(-1), universidadeFiliado(nullptr), departamentoFiliado(nullptr)
+    mesDeNascimento(mesDeNascimento), anoDeNascimento(anoDeNascimento)
 {
     strcpy(this->nome, nome);
 }
@@ -72,7 +71,8 @@ void Pessoa::imprimirDepartamentoFiliado()
     if(departamentoFiliado != nullptr)
     {
         std::cout << nome << " eh/foi filiado ao "
-                  << departamentoFiliado->obterNome() << ".\n";
+                  << departamentoFiliado->obterNome() << " da "
+                  << universidadeFiliado->obterNome() << ".\n";
     }
     else
     {

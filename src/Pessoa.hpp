@@ -11,14 +11,14 @@
 class Pessoa
 {
   private:
-    char nome[40];
-    int  diaDeNascimento;
-    int  mesDeNascimento;
-    int  anoDeNascimento;
-    int  idade;
+    char nome[40]        = "";
+    int  diaDeNascimento = 0;
+    int  mesDeNascimento = 0;
+    int  anoDeNascimento = 0;
+    int  idade           = -1;
 
-    Universidade* universidadeFiliado;
-    Departamento* departamentoFiliado;
+    Universidade* universidadeFiliado = nullptr;
+    Departamento* departamentoFiliado = nullptr;
 
   public:
     // O valor padrão só deve aparecer no protótipo da função/método/construtor.

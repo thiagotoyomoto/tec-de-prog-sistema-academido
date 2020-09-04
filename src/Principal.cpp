@@ -1,17 +1,20 @@
 #include "Principal.hpp"
 #include "Data.hpp"
-#include "src/Departamento.hpp"
+#include "Departamento.hpp"
 #include <iostream>
 
 Principal::Principal() :
-    joao("Joao", 1, 1, 1996), thiago("Thiago", 18, 4, 2001),
-    einstein("Einstein", 14, 3, 1879), newton("Newton", 4, 1, 1643),
-    UTFPR("Universidade Tecnologica Federal do Parana"),
+    einstein("Einstein", 14, 3, 1879), joao("Joao", 1, 1, 1996),
+    newton("Newton", 4, 1, 1643), thiago("Thiago", 18, 4, 2001),
+    cambridge("Universidade de Cambridge"), harvard("Universidade Harvard"),
     princeton("Universidade de Princeton"),
-    cambridge("Universidade de Cambridge"),
-    departamentoDeMatematica("Departamento de Matematica"),
+    utfpr("Universidade Tecnologica Federal do Parana"),
+    yale("Universidade Yale"),
+    departamentoDeAstrologia("Departamento de Astrologia"),
+    departamentoDeComputacao("Departamento de Computacao"),
     departamentoDeFisica("Departamento de Fisica"),
-    departamentoDeComputacao("Departamento de Computacao")
+    departamentoDeMatematica("Departamento de Matematica"),
+    departamentoDeQuimica("Departamento de Quimica")
 {
     /*
     Obs.: Para ignorar algum valor de uma tupla, é só utilizar o objeto
@@ -23,41 +26,57 @@ Principal::Principal() :
     std::tie(diaAtual, mesAtual, anoAtual) = Data::obterAtual();
     Data::imprimirFormatada(diaAtual, mesAtual, anoAtual);
 
-    UTFPR.atribuirDepartamento(&departamentoDeComputacao);
-    princeton.atribuirDepartamento(&departamentoDeMatematica);
-    cambridge.atribuirDepartamento(&departamentoDeFisica);
+    cambridge.adicionarDepartamento(0, &departamentoDeFisica);
+    princeton.adicionarDepartamento(0, &departamentoDeMatematica);
+    utfpr.adicionarDepartamento(0, &departamentoDeComputacao);
+    yale.adicionarDepartamento(0, &departamentoDeAstrologia);
+    yale.adicionarDepartamento(1, &departamentoDeQuimica);
 
-    thiago.atribuirUniversidadeFiliado(&UTFPR);
     einstein.atribuirUniversidadeFiliado(&princeton);
     newton.atribuirUniversidadeFiliado(&cambridge);
+    thiago.atribuirUniversidadeFiliado(&utfpr);
 
-    thiago.atribuirDepartamentoFiliado(&departamentoDeComputacao);
     einstein.atribuirDepartamentoFiliado(&departamentoDeMatematica);
     newton.atribuirDepartamentoFiliado(&departamentoDeFisica);
+    thiago.atribuirDepartamentoFiliado(&departamentoDeComputacao);
+
+    departamentoDeAstrologia.registrarNaUniversidade(&yale);
+    departamentoDeComputacao.registrarNaUniversidade(&utfpr);
+    departamentoDeFisica.registrarNaUniversidade(&cambridge);
+    departamentoDeMatematica.registrarNaUniversidade(&princeton);
+    departamentoDeQuimica.registrarNaUniversidade(&yale);
 
     executar();
 }
 
 void Principal::executar()
 {
-    joao.calcularIdade(diaAtual, mesAtual, anoAtual);
-    thiago.calcularEImprimirIdade(diaAtual, mesAtual, anoAtual);
     einstein.calcularEImprimirIdade(diaAtual, mesAtual, anoAtual);
+    joao.calcularIdade(diaAtual, mesAtual, anoAtual);
     newton.calcularEImprimirIdade(diaAtual, mesAtual, anoAtual);
+    thiago.calcularEImprimirIdade(diaAtual, mesAtual, anoAtual);
 
     std::cout << '\n';
 
-    joao.imprimirUniversidadeFiliado();
-    thiago.imprimirUniversidadeFiliado();
     einstein.imprimirUniversidadeFiliado();
+    joao.imprimirUniversidadeFiliado();
     newton.imprimirUniversidadeFiliado();
+    thiago.imprimirUniversidadeFiliado();
 
     std::cout << '\n';
 
-    joao.imprimirDepartamentoFiliado();
-    thiago.imprimirDepartamentoFiliado();
     einstein.imprimirDepartamentoFiliado();
+    joao.imprimirDepartamentoFiliado();
     newton.imprimirDepartamentoFiliado();
+    thiago.imprimirDepartamentoFiliado();
+
+    std::cout << '\n';
+
+    cambridge.imprimirTodosOsDepartamentos();
+    harvard.imprimirTodosOsDepartamentos();
+    princeton.imprimirTodosOsDepartamentos();
+    utfpr.imprimirTodosOsDepartamentos();
+    yale.imprimirTodosOsDepartamentos();
 
     std::cout << std::flush;
 }

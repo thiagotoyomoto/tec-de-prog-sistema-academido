@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux (clang)",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/builds/clang/compile_commands.json"
+        },
+        {
+            "name": "Linux (gcc)",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/builds/gcc/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

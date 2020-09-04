@@ -2,23 +2,27 @@
 #define DC63510F_9A97_489B_B0D1_53034A915F5E
 
 #include "Pessoa.hpp"
-#include "src/Universidade.hpp"
+#include "Universidade.hpp"
 
 class Principal
 {
   private:
-    Pessoa joao;
-    Pessoa thiago;
     Pessoa einstein;
+    Pessoa joao;
     Pessoa newton;
+    Pessoa thiago;
 
-    Universidade UTFPR;
-    Universidade princeton;
     Universidade cambridge;
+    Universidade harvard;
+    Universidade princeton;
+    Universidade utfpr;
+    Universidade yale;
 
-    Departamento departamentoDeMatematica;
-    Departamento departamentoDeFisica;
+    Departamento departamentoDeAstrologia;
     Departamento departamentoDeComputacao;
+    Departamento departamentoDeFisica;
+    Departamento departamentoDeMatematica;
+    Departamento departamentoDeQuimica;
 
     int diaAtual;
     int mesAtual;
